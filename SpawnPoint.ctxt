@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=SpawnPoint
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ SpawnPoint.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=acc\ dt
+comment1.target=SpawnPoint(Vec2,\ double)
+comment2.params=
+comment2.target=SpawnPoint()
+comment3.params=a\ b
+comment3.target=int\ randomInt(int,\ int)
+comment4.params=b
+comment4.target=int\ randomInt(int)
+comment5.params=t
+comment5.target=greenfoot.Color\ getRainbow(double)
+comment6.params=counter
+comment6.target=greenfoot.Color\ getRainbow1(int)
+comment7.params=
+comment7.target=void\ act()
+numComments=8

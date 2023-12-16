@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Constraint
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ constraint.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Constraint()
+comment2.params=r
+comment2.target=Constraint(double)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

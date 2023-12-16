@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=VerletObject
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ VerletObject.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=VerletObject()
+comment2.params=radius\ color\ initialPosition
+comment2.target=VerletObject(double,\ greenfoot.Color,\ Vec2)
+comment3.params=dt
+comment3.target=void\ updatePosition(double)
+comment4.params=acc
+comment4.target=void\ accelerate(Vec2)
+comment5.params=v\ dt
+comment5.target=void\ setVelocity(Vec2,\ double)
+comment6.params=
+comment6.target=void\ act()
+numComments=7

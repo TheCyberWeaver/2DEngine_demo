@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Vec2
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Vec2.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=x\ y
+comment1.target=Vec2(double,\ double)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Vec2\r\n
+comment10.params=b
+comment10.target=double\ getDistTo(Vec2)
+comment2.params=b
+comment2.target=Vec2(Vec2)
+comment3.params=
+comment3.target=Vec2()
+comment4.params=b
+comment4.target=Vec2\ subtract(Vec2)
+comment5.params=b
+comment5.target=Vec2\ add(Vec2)
+comment6.params=b
+comment6.target=Vec2\ time(double)
+comment7.params=b
+comment7.target=Vec2\ divide(double)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=
+comment9.target=double\ getDist()
+numComments=11
