@@ -11,8 +11,8 @@ abstract public class SpawnPoint extends Actor
     
     protected int timer=0;
     protected Color color=new Color(0,0,0);
-    public double shootSpeed=0.2;
-    public double shootInitialSpeed=15;
+    public double shootSpeed=0.8;
+    public double shootInitialSpeed=50;
     public double radius=7;
     
     protected Class<? extends MyWorld> MyWorldClassRef=new MyWorld().getClass();

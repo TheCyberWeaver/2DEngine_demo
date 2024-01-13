@@ -8,22 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Colorful extends SpawnPoint
 {
-    public double angleSpeed=0.1;
-    public double colorChangeSpeed=0.02;
+    public double angleSpeed=0.02;
+    public double colorChangeSpeed=0.0015;
     
     public Colorful(){
         super();
-        shootInitialSpeed=50;
+        shootInitialSpeed=750;
     }
     public Colorful(double r){
         super();
         radius=r;
         
     }
-    public void addedToWorld(World world){
-        angleSpeed/=getWorldOfType(MyWorldClassRef).subSteps;
-        colorChangeSpeed/=getWorldOfType(MyWorldClassRef).subSteps;
-    }
+    
     public int randomInt(int a,int b){
         return (int) ((b-a+1) * Math.random() + a);
     }
