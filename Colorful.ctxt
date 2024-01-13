@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Colorful
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Colorful.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Colorful()
+comment2.params=r
+comment2.target=Colorful(double)
+comment3.params=world
+comment3.target=void\ addedToWorld(greenfoot.World)
+comment4.params=a\ b
+comment4.target=int\ randomInt(int,\ int)
+comment5.params=t
+comment5.target=greenfoot.Color\ getRainbow(double)
+comment6.params=
+comment6.target=void\ act()
+numComments=7

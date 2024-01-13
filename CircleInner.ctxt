@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CircleInner
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ CircleInner.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=r
+comment1.target=CircleInner(double)
+comment2.params=
+comment2.target=CircleInner()
+comment3.params=object
+comment3.target=void\ applyConstraint(VerletObject)
+numComments=4

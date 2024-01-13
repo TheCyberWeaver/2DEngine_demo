@@ -17,7 +17,11 @@ public class VerletObject extends Actor
     Color color=new Color(56,96,12);
     public VerletObject(){
         super();
-        
+               
+        GreenfootImage im = new GreenfootImage((int)radius*2,(int)radius*2);
+        im.setColor(color);//Add Background color
+        im.fillOval(0,0,(int)radius*2,(int)radius*2);
+        setImage(im);        
     }
     public VerletObject(double radius, Color color,Vec2 initialPosition){
         super();
@@ -33,6 +37,11 @@ public class VerletObject extends Actor
         im.setColor(color);//Add Background color
         im.fillOval(0,0,(int)radius*2,(int)radius*2);
         setImage(im);
+    }
+    public void addedToWorld(World world){
+        position_current=new Vec2(getX(),getY());
+        position_old=new Vec2(position_current);
+        acceleration=new Vec2(0,0);
     }
     
     public void updatePosition(double dt){

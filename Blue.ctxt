@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Blue
+comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Blue.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Blue()
+comment2.params=r
+comment2.target=Blue(double)
+numComments=3

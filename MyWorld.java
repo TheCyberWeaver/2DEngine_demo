@@ -10,17 +10,18 @@ import java.util.ArrayList;
 public class MyWorld extends World
 {
     
-    public Vec2 gravity=new Vec2(0,1000);
+    public Vec2 gravity=new Vec2(0,2000);
     public double dt=0.01;
     public Class<? extends VerletObject> VerletObjectClassRef=new VerletObject().getClass();
     public Class<? extends Constraint> ConstraintClassRef=new Constraint().getClass();
     
+    public int subSteps=8;
     public MyWorld()
     {    
         // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
         super(768, 768, 1);
         initBackground();
-        addObject(new Constraint(300),350,350);
+        addObject(new CircleOuter(300),350,350);
         //addObject(new SpawnPoint(gravity,dt),300,100);
         //for(int i=0;i<5;i++)addObject(new VerletObject(new Vec2(150+i*40,105),gravity),0,0);
     }
@@ -31,7 +32,7 @@ public class MyWorld extends World
     }
     public void act()
     {
-        int subSteps=8;
+        
         double sub_dt=dt/subSteps;
         for(int i=0;i<subSteps;i++){
             applyGravity();
@@ -53,19 +54,10 @@ public class MyWorld extends World
         }
     }
     public void applyConstraint(){
-        Vec2 constraintCenter=new Vec2(0,0);
-        double constraintRadius=200;
-        for(Constraint constraint : getObjects(ConstraintClassRef)){
-            constraintCenter=new Vec2(constraint.getX(),constraint.getY());
-            constraintRadius=constraint.radius;
-        }
-        
         for(VerletObject object : getObjects(VerletObjectClassRef)){
-            Vec2 to_obj=constraintCenter.subtract(object.position_current);
-            double dist=to_obj.getDist();
-            if(dist>(constraintRadius-object.radius)){
-                Vec2 n=to_obj.divide(dist);
-                object.position_current=constraintCenter.subtract(n.time(constraintRadius-object.radius));
+            
+            for(Constraint constraint : getObjects(ConstraintClassRef)){
+                constraint.applyConstraint(object);
             }
         }
     }

@@ -6,7 +6,6 @@
  */
 public class Vec2  
 {
-    // Attribute -  ersetzen Sie das Beispiel hier mit ihren eigenen Attributen
     public double x;
     public double y;
 
@@ -43,6 +42,7 @@ public class Vec2
     public String toString(){
         return "Vec2("+x+","+y+")";
     }
+    //The Euclidiean distance to the origin
     public double getDist(){
         double tmp=x*x+y*y;
         return Math.sqrt(tmp);
