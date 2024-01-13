@@ -1,8 +1,8 @@
 /**
  * Ergänzen Sie hier eine Beschreibung für die Klasse Vec2.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author TheCyberWeaver 
+ * @version 2024.1.13
  */
 public class Vec2  
 {

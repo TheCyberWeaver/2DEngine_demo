@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
- * Ergänzen Sie hier eine Beschreibung für die Klasse CircleInner.
+ * Ergänzen Sie hier eine Beschreibung für die Klasse Red.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author TheCyberWeaver 
+ * @version 2024.1.13
  */
 public class CircleInner extends Constraint
 {

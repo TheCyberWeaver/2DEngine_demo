@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
- * Ergänzen Sie hier eine Beschreibung für die Klasse constraint.
+ * Ergänzen Sie hier eine Beschreibung für die Klasse Red.
  * 
  * @author TheCyberWeaver 
- * @version (eine Versionsnummer oder ein Datum)
+ * @version 2024.1.13
  */
 public class Constraint extends Actor
 {

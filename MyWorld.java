@@ -2,49 +2,46 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 import java.util.ArrayList; 
 /**
- * Ergänzen Sie hier eine Beschreibung für die Klasse MyWorld.
+ * Ergänzen Sie hier eine Beschreibung für die Klasse Red.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author TheCyberWeaver 
+ * @version 2024.1.13
  */
 public class MyWorld extends World
 {
     
-    public Vec2 gravity=new Vec2(0,2000);
-    public double dt=0.01;
+    public Vec2 gravity=new Vec2(0,3000);
+    public double dt=0.01;//Ein vorausgesetzter Wert, Die Zeit zwischen zwei Frames
     public Class<? extends VerletObject> VerletObjectClassRef=new VerletObject().getClass();
     public Class<? extends Constraint> ConstraintClassRef=new Constraint().getClass();
     
-    public int subSteps=8;
+    public int subSteps=8;  //Die Anzahl der Iteration jedes Frames
     public MyWorld()
     {    
-        // Erstellt eine neue Welt mit 600x400 Zellen und einer Zell-Größe von 1x1 Pixeln.
+        // Erstellt eine neue Welt mit 768x768 Zellen und einer Zell-Größe von 1x1 Pixeln.
         super(768, 768, 1);
         initBackground();
-        addObject(new CircleOuter(300),350,350);
-        //addObject(new SpawnPoint(gravity,dt),300,100);
-        //for(int i=0;i<5;i++)addObject(new VerletObject(new Vec2(150+i*40,105),gravity),0,0);
+        
+        addObject(new CircleOuter(300),350,350);        //Eine Grenze von außen hinzufügen
     }
     public void initBackground(){
-        GreenfootImage background = getBackground();//Create Image
-        background.setColor(Color.BLACK);//Add Background color
+        GreenfootImage background = getBackground();        //Create Image
+        background.setColor(Color.BLACK);                   //Add Background color
         background.fillRect(0,0,getWidth(),getHeight());
     }
-    public void act()
+    public void act()   //Main Loop
     {
-        
-        double sub_dt=dt/subSteps;
-        for(int i=0;i<subSteps;i++){
-            applyGravity();
-            applyConstraint();
-            checkCollisions();
-            updatePosition(sub_dt);
+        double sub_dt=dt/subSteps;      
+        for(int i=0;i<subSteps;i++){    //Jede Iteration
+            applyGravity();     //Gravitation anwenden
+            applyConstraint();  //Zusammenstoß mit der Grenze
+            checkCollisions();  //Zusammenstoß zwischen den Kugeln
+            updatePosition(sub_dt); //Die nächste Position berechnen
         }
     }
     
     public void updatePosition(double dt){
-        for(VerletObject object : getObjects(VerletObjectClassRef)){
-            //System.out.println(object.position_current);
+        for(VerletObject object : getObjects(VerletObjectClassRef)){    //Iteration durch jeden Kugel
             object.updatePosition(dt);
         }
     }
@@ -61,6 +58,8 @@ public class MyWorld extends World
             }
         }
     }
+    //Ein dumme aber einfache Methode, Kollision zu überprüfen
+    //Zeitkomplexität: O(N^2)
     public void checkCollisions(){
         double response_coef = 0.75;
         ArrayList<VerletObject> allObjects=new ArrayList<VerletObject>();

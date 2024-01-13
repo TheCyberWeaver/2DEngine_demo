@@ -1,20 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
 /**
- * Ergänzen Sie hier eine Beschreibung für die Klasse VerletObject.
+ * Ergänzen Sie hier eine Beschreibung für die Klasse Red.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author TheCyberWeaver 
+ * @version 2024.1.13
  */
 public class VerletObject extends Actor
 {
     
-    Vec2 position_current;
-    Vec2 position_old;
-    Vec2 acceleration;
+    Vec2 position_current;  //die aktuelle Position
+    Vec2 position_old;      //die Position beim letzten Frame
+    Vec2 acceleration;      //Die Beschleunigung
     
     public double radius=15;
     Color color=new Color(56,96,12);
+    
     public VerletObject(){
         super();
                
@@ -43,10 +44,12 @@ public class VerletObject extends Actor
         position_old=new Vec2(position_current);
         acceleration=new Vec2(0,0);
     }
-    
+    //Position akualisieren
+    //Verlet integration
+    //Xn+1=Xn+Vn*dt
     public void updatePosition(double dt){
         Vec2 displacement=position_current.subtract(position_old);
-        position_old=new Vec2(position_current);
+        position_old=new Vec2(position_current);    
         position_current=position_current.add(displacement).add(acceleration.time(dt*dt));
         acceleration=new Vec2();
     }
@@ -57,6 +60,7 @@ public class VerletObject extends Actor
     {
         position_old = position_current.subtract(v.time( dt));
     }
+    //Einen Kreis auf der akuellen Position mahlen
     public void act() 
     {
         setLocation((int)Math.round(position_current.x),(int)Math.round(position_current.y));
