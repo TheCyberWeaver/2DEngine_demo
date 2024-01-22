@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=CircleOuter
 comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Red.\r\n\ \r\n\ @author\ TheCyberWeaver\ \r\n\ @version\ 2024.1.13\r\n
-comment1.params=r
-comment1.target=CircleOuter(double)
+comment1.params=r\ c
+comment1.target=CircleOuter(double,\ greenfoot.Color)
 comment2.params=
 comment2.target=CircleOuter()
 comment3.params=object

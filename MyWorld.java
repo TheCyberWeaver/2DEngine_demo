@@ -22,7 +22,7 @@ public class MyWorld extends World
         super(768, 768, 1);
         initBackground();
         
-        addObject(new CircleOuter(300),350,350);        //Eine Grenze von außen hinzufügen
+        addObject(new CircleOuter(),350,350);        //Eine Grenze von außen hinzufügen
     }
     public void initBackground(){
         GreenfootImage background = getBackground();        //Create Image

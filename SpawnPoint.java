@@ -29,16 +29,6 @@ abstract public class SpawnPoint extends Actor
     }
     public void act() 
     {
-        timer+=1;
-        if(timer%(int)(1.0/shootSpeed)==0){            
-            
-            VerletObject ball=new VerletObject(radius,color,new Vec2(this.getX(),this.getY()));
-            getWorld().addObject(ball,this.getX(),this.getY());
-                       
-            double xDelta=0;
-            double yDelta=1;
-            ball.setVelocity(new Vec2(shootInitialSpeed*xDelta,shootInitialSpeed*yDelta),getWorldOfType(MyWorldClassRef).dt);
-            
-        }
+        
     }    
 }

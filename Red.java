@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author TheCyberWeaver 
  * @version 2024.1.13
  */
-public class Red extends SpawnPoint
+public class Red extends PureColor
 {
     public Red(){
         super();

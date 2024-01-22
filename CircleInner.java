@@ -8,26 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class CircleInner extends Constraint
 {
-    
-    public double radius;
-    public Color color=new Color(0,0,0);
-    
-    public CircleInner(double r){
-        radius=r;
-        GreenfootImage im = new GreenfootImage((int)radius*2,(int)radius*2);
-        im.setColor(color);//Add Background color
-        im.fillOval(0,0,(int)radius*2,(int)radius*2);
-        setImage(im);
+        
+    public CircleInner(double r,Color c){
+        super(r,c);
+        response_coef = 0.75;
     }
     public CircleInner(){
-        radius=100;
-        GreenfootImage im = new GreenfootImage((int)radius*2,(int)radius*2);
-        im.setColor(color);//Add Background color
-        im.fillOval(0,0,(int)radius*2,(int)radius*2);
-        setImage(im);
+        super(100,new Color(0,0,0));
+        response_coef = 0.75;
     }
     public void applyConstraint(VerletObject object){
-        double response_coef = 0.75;
         
         Vec2 constraintCenter=new Vec2(getX(),getY());
         Vec2 to_obj=constraintCenter.subtract(object.position_current);
